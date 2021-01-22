@@ -8,7 +8,7 @@ const Timer = () => {
     let [seconds, setseconds] = useState(0);
     let [minutes, setminutes] = useState(0);
     let [hours, sethours] = useState(0);
-    const [isOn, setOn] = useState<any>();
+    const [isOn, setOn] = useState<NodeJS.Timeout>(setInterval(()=>{},100));
     const [isstart, setstart] = useState(false);
     
     const startTimer = () => {
