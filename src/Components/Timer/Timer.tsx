@@ -13,7 +13,7 @@ const Timer = () => {
     
     const startTimer = () => {
         if (isstart === false) {
-            setOn(setInterval(run,10));
+            setOn(setInterval(run,100));
         }
         setstart(true);
     }
@@ -29,10 +29,11 @@ const Timer = () => {
         setminutes(0);
         setseconds(0);
         sethours(0);
+        setstart(false);
     }
 
     function run() {        
-        if (milliseconds === 100) {
+        if (milliseconds === 10) {
             setseconds(seconds+=1);
             milliseconds = 0;
         }
@@ -51,7 +52,7 @@ const Timer = () => {
         <div className="timer-container">
             <h1 className="time-display">Timer App</h1>
             <div className="time-display time">
-                {hours!==0?hours+':':null}{minutes<10?'0'+minutes:minutes}:{seconds>=10?seconds:'0'+seconds}.{('0' + milliseconds).slice(-2)}
+                {hours!==0?hours+':':null}{minutes<10?'0'+minutes:minutes}:{seconds>=10?seconds:'0'+seconds}.{('0' + milliseconds).slice(-1)}
             </div>
             <div className="timer-button-container">
                 <TimerButton

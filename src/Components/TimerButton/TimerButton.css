@@ -5,6 +5,7 @@
     border-radius: 50%;
     max-width: 100px;
     height: 100px;
+    transition: 0.5s;
 }
 
 .start {
@@ -21,9 +22,7 @@
 
 .button-container:hover {
   background-color: black;
-  transition: .5s;
 }
-
 
 .button {
   display: flex;
